@@ -2,14 +2,33 @@
 <html lang="en">
     <body>
         <div class="box">
+
+            <!-- {# --- DEBUGGING LINES START --- #}
+            <p style="color: red; font-weight: bold;">DEBUG INFO:</p>
+            <p>Request method is: {{ request.method }}</p>
+            <p>User is authenticated: {{ user.is_authenticated }}</p>
+            <p>Raw messages object: {{ messages }}</p> {# This will print the messages object itself #}
+            {% if messages %}
+                <p style="color: green;">Messages are present in context!</p>
+            {% else %}
+                <p style="color: orange;">No messages object found in context.</p>
+            {% endif %}
+            {# --- DEBUGGING LINES END --- #} -->
+
+            {% if messages %}
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
+            {% endif %}
             <h2>Welcome to Trevo</h2>
             <h3>Sign in now!</h3>
-            <form>
+            <form method="post", action="{% url 'login' %}"> <!-- Django uses to verify that the form submission is coming from your site and not from a malicious third party. -->
+                {% csrf_token %}
                 <label for="Username">Username</label><br>
-                <input type="text" id="username" name="Username"><br>
+                <input type="text" id="username" name="username"><br>
                 <br>
                 <label for="Password">Password</label><br>
-                <input type="password" id="password" name="Password"><br>
+                <input type="password" id="password" name="password"><br>
                 <br>
                 <input type="submit" id="submit" name="submit" value="Sign in"><br>
             </form>
