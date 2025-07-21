@@ -1,0 +1,222 @@
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['saVIGfNrtbXG65cLnnFj9MrlgY8E8y3gFbPnZs856T7PuFhg8oAodJPtTOfqSScE'], 'username': ['asdasfa'], 'password': ['asfsafdsafd'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Messages: [Message(level=40, message='Invalid username or password. Please try again.')]
+Request method: GET
+Code 2: Rendering login page
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['cxHzdHHklEw2otB2ecPCPnnGCweQymZ3pyBewU2YYmGbM3GxZdKHTkLOfmlCiG8r'], 'username': ['adasfd'], 'password': ['afasfa'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Messages: [Message(level=40, message='Invalid username or password. Please try again.')]
+Request method: GET
+Code 2: Rendering login page
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Not Found: /favicon.ico
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['ZbGudIQtAPsWow4w2qt3Ds1DjIJE6v5zccA9wVb7dxC5M691Nro8HppLWyQqQPeX'], 'username': ['test'], 'password': ['123'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['ZYQHV8xPSox8aPx0CLPrl9oJpI0HjWGRcZKmelStv6HhypCvnMKwp6MR2y7t3gPf'], 'username': ['afsafaf'], 'password': ['rhgrgreg'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['xVL9eGCXdoGokwnxV27bKl1wcJO21tTlKWFOxTXBQ6QxI6s2G32gOipEPzVOLN2J'], 'username': ['affsfagfasg'], 'password': ['sagfafa'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['DjgKLlwNL95s8Lk0i5AMtFOlExt1nocLQkap4yRroRfBwlpv36vRxCcthnAN7Il9'], 'username': ['DSgfDFdsF'], 'password': ['sdgfdfsgf'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['XtGnIEUbRHQA2z2MuNNn6xXIBc49ubehauA21RfPup0Jq97hfOIsaulQe2bVevnF'], 'username': ['asd'], 'password': ['asfsaf'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['xbCPdzp1iG12YQ8pRlNq4tulZRNfDkJnKcwuwMKFVobbmqdUCmIv8qStCHU1nESL'], 'username': ['asfdafagf'], 'password': ['sgagadfg'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['nuUV3JAz33BX4YUq24L6cOiITaMC5ZiPAvOAmWVdGLL6syZVN5GbgLGQw0ToPjrd'], 'username': ['fasdfsdf'], 'password': ['sagfdsfd'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['k8pJpX19JSiN3U6K2bNSIhUHF1E13HWXx9joIamNmAsWrubfNcIXMeiPiRLNN15l'], 'username': ['asfaf'], 'password': ['asfaf'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['b5ERIHGwBwOnuVE8D7yVDdp1iFdHUYEpo6yw1U1aeeYwSvJDo8t0HaN9VvktEiNN'], 'username': ['asfsf'], 'password': ['afssafa'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['y11abi3oxvBGzt81CEbeIytTK7QhdzalL2VPuvo2adLPX3dwnF6jMvR1nXX3XTjJ'], 'username': ['rkiae'], 'password': ['test1234'], 'submit': ['Sign in']}>
+Code 0: User authenticated, redirecting to home
+Internal Server Error: /loginapp/login/
+Traceback (most recent call last):
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginapp\views.py", line 17, in login_user
+    return redirect('home')
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Not Found: /loginapp/login/trevoBackground.jpg
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Not Found: /media/trevoBackground.jpg
+Request method: GET
+Code 2: Rendering login page
+Not Found: /media/trevoBackground.jpg
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Not Found: /loginpage/media/trevoBackground.jpg
+C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Internal Server Error: /loginapp/login/
+Traceback (most recent call last):
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginapp\views.py", line 24, in login_user
+    return render(request, "registration/login.html", {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\rkiae\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 33: 'static'. Did you forget to register or load this tag?
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['9HzFXN2XNoVW14SoouD8EavjHm4v3JlsUPvwHA7AAUOGRhkZTyuyRSQDgX3IHuxZ'], 'username': ['asfasf'], 'password': ['afasfgsg'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page

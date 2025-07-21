@@ -69,6 +69,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'loginpage.wsgi.application'
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+MESSAGE_LEVEL = 10
+
+STATIC_ROOT = ''
+STATIC_URL = '/static/'
+STATICFILES_DIRS = ('static',)
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -98,6 +104,26 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
 
 
 # Internationalization

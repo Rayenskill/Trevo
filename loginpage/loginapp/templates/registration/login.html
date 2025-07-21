@@ -1,25 +1,16 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <body>
         <div class="box">
-
-            <!-- {# --- DEBUGGING LINES START --- #}
-            <p style="color: red; font-weight: bold;">DEBUG INFO:</p>
-            <p>Request method is: {{ request.method }}</p>
-            <p>User is authenticated: {{ user.is_authenticated }}</p>
-            <p>Raw messages object: {{ messages }}</p> {# This will print the messages object itself #}
             {% if messages %}
-                <p style="color: green;">Messages are present in context!</p>
-            {% else %}
-                <p style="color: orange;">No messages object found in context.</p>
-            {% endif %}
-            {# --- DEBUGGING LINES END --- #} -->
-
-            {% if messages %}
+            <ul class="messages">
                 {% for message in messages %}
-                {{message}}
+                <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
                 {% endfor %}
+            </ul>
             {% endif %}
+
             <h2>Welcome to Trevo</h2>
             <h3>Sign in now!</h3>
             <form method="post", action="{% url 'login' %}"> <!-- Django uses to verify that the form submission is coming from your site and not from a malicious third party. -->
@@ -40,12 +31,13 @@
                 align-items: center;
                 justify-content: center;
                 height: 100%;
-
+                background-image: url('{% static "trevoBackground.jpg" %}');
+                background-blend-mode: lighten;
             }
             .box {
                 background-color: white;
-                width: 70%;
-                height: 275px;
+                min-width: 350px;
+                min-height: 275px;
                 text-align: center;
                 font-family: sans-serif;
                 margin-top: 200px;
@@ -54,6 +46,12 @@
             h3 {
                 font-size: 15px;
                 margin-top: 5px;
+            }
+
+            .messages {
+                font-family: sans-serif;
+                color: red;
+                padding-right: 30px;
             }
 
         </style>
