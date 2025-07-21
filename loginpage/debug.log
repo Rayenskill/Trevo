@@ -220,3 +220,208 @@ C:\Users\rkiae\OneDrive - polymtlus\Documents\Trevo\loginpage\loginpage\settings
 Watching for file changes with StatReloader
 Request method: GET
 Code 2: Rendering login page
+Watching for file changes with StatReloader
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['YuYTMo8qVuhvoDREhjVTsdn6V6OfTqhLJCUKwbd3I0afeQjfMnMjFVIquHNsxbti'], 'username': ['asffaf'], 'password': ['asfasfaf'], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['7hEjBQAbo9TOnAHD7dE9rt4PO0oC7gVlSpAalDFObFMydN9eChvzEbp9nBnPL17S'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['b8knmfS9a6vhBVnBjihpdGeTGYCm46nsWgge62XMXCo1r8PcOm8PqozdfzBzIRzZ'], 'username': ['asad'], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['wwFDuYBIGLnimptmM01scdNIUnqccop2hEBueLGlthg2cCVXh4SSpV82tYppQ9Bz'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['ccKUKOLQHAzR7Wsofgf9QKmmBTTEktFcXkGLuBQtu6sBX9UZKk6z3sHGauSRYeRJ'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['5V1wLKPI5xsyrwvdQwnZnJfBeCXFka7KQ3XnvxUlS3lihJXOlAepArAVNdWSYVjh'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['k0HMkxRghA3yahtT2bHcnj0awKv8ttba58DD4kWT46Wi0uVuxfyCA1lu5lul7enH'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['z3qdWcjTeu71EDYpcshDP1tJk8bG2O14kbm4GZow100LuQq0Hw832JO3TJaTGzdB'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['TuCAO4O7OkK1DYSbYMi1qfjMYx7FFeeYECyryRTKBQDLtbkMtQ9rDXE6x86SjZqv'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['HyzQ73vjTpqIu9HeqdRsFlbE2vBXkCsAsGvHRQAWGVjskm9PVhISS3wYB6AaYnE7'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['FqRtVoX0kXYFkK9exPatVay25v9s5olqqyNkFb2D7tRpaXBP2T1T8STmE68FJ9xX'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
+Request method: POST
+POST DATA: <QueryDict: {'csrfmiddlewaretoken': ['ZViASLJV91ktlKVbiHtJA6NdGHvn8N8zK3erCyOyWxddbXnMNLk9NO8xfiuAMyk6'], 'username': [''], 'password': [''], 'submit': ['Sign in']}>
+Code 1: Invalid credentials, setting error message
+Request method: GET
+Code 2: Rendering login page
