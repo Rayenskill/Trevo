@@ -6,7 +6,7 @@ from django.contrib import messages
 # Create your views here.
 
 
-def register(request):
+def register_view(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
@@ -14,7 +14,8 @@ def register(request):
             messages.info(request, "Username is already taken.")
             return redirect('register')
         else:
-            user = User.objects.create(username=username, password=password)
+            user = User.objects.create_user(username=username, password=password)
+            user.is_active = True
             user.save()
             messages.success(request, "Account created successfully!")
             return redirect('login')
@@ -23,14 +24,14 @@ def register(request):
 
 
 
-def login(request):
+def login_view(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password) # built-in contrib.auth (admin panel)
         if user is not None:
             login(request, user)
-            return redirect('homepage')
+            return redirect('/')
         else:
             messages.error(request, "Invalid username or password. Please try again.")
             return redirect('login')
