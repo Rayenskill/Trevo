@@ -31,7 +31,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password) # built-in contrib.auth (admin panel)
         if user is not None:
             login(request, user)
-            return redirect('/')
+            return redirect('/') # redirects to the home page (root)
         else:
             messages.error(request, "Invalid username or password. Please try again.")
             return redirect('login')
