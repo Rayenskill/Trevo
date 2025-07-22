@@ -8,14 +8,14 @@
 <body>
 
     <header>
-    <h1>Hello and welcome to the homepage!</h1>
+    <h1>Hello and welcome to the homepage! {{user.username}}</h1>
     <h2>You Want to Chat, You Want to Buy, You Want to Sell, You Want to Hangout, We Have All You Need!</h2>
     </header>
 
     <div class="menu">
         <button onclick="location.href='{% url 'login' %}'">Login</button>
         <button onclick="location.href='{% url 'register' %}'">Sign Up</button>
-        <button onclick="location.href='{% url 'login' %}'">Log out</button>
+        <button onclick="location.href='{% url 'logout' %}'">Log out</button>
         
     </div>
 
