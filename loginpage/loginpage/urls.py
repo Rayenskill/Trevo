@@ -19,8 +19,9 @@ from django.shortcuts import redirect
 from django.urls import path, include
 
 urlpatterns = [
-    path("", lambda request: redirect('loginapp/', permanent=True)),
+    path("", lambda request: redirect('loginapp/', permanent=False)),
     path('admin/', admin.site.urls),
+    path('home/', include("loginapp.urls")),
     path("loginapp/", include("loginapp.urls")),
     path("loginapp/", include('django.contrib.auth.urls')),
 ]

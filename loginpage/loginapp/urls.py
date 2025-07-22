@@ -6,5 +6,7 @@ from . import views
 urlpatterns = [
     path('', lambda request: redirect('login', permanent=True)),
     path("login/", views.login_user, name="login"),
+    path("register/", views.register_user, name="register"),
+    path("home/", views.homepage, name='home'),
 ]
 

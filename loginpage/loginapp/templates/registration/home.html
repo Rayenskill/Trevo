@@ -8,43 +8,8 @@
     </head>
     <body>
         <div class="box">
-            {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
-                {% endfor %}
-            </ul>
-            {% endif %}
-
-            <h2>Welcome to Trevo</h2>
-            <h3>Sign in now!</h3>
-            <form method="post", action="{% url 'login' %}"> <!-- Django uses to verify that the form submission is coming from your site and not from a malicious third party. -->
-                {% csrf_token %}
-                <div class="userbox">
-                    <label for="Username">Username</label><br>
-                    <input type="text" id="username" name="username"><br>
-                    <br>
-                </div>
-
-                <div class="passbox">
-                    <label for="Password">Password</label><br>
-                    <input type="password" id="password" name="password"><br>
-                    <br>
-                </div>
-
-                <div class="submitdiv">
-                    <input type="submit" class="submitbtn" id="submit" name="submit" value="Sign in"><br>
-                </div>
-                <br>
-            </form>
-
-            <form method='get', action="{% url 'register' %}">
-                {% csrf_token %}
-                <h3 class="newmember">New member? Sign up here</h3>
-                <div class="regsubmitdiv">
-                    <input type="submit" class="regsubmitbtn" id="submit" name="submit" value="Sign up"><br>
-                </div>
-            </form>
+            <h2>Home page !</h2>
+            <h3>You were successfully logged in.</h3>
         </div>
         <style>
             html, body{

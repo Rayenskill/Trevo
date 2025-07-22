@@ -16,33 +16,24 @@
             </ul>
             {% endif %}
 
-            <h2>Welcome to Trevo</h2>
-            <h3>Sign in now!</h3>
-            <form method="post", action="{% url 'login' %}"> <!-- Django uses to verify that the form submission is coming from your site and not from a malicious third party. -->
+            <h2>New member?</h2>
+            <h3>Sign up now!</h3>
+            <form method="post", action="{% url 'register' %}" class="regform"> <!-- Django uses to verify that the form submission is coming from your site and not from a malicious third party. -->
                 {% csrf_token %}
-                <div class="userbox">
+                {{ form }}
+                <!-- <div class="reguserbox">
                     <label for="Username">Username</label><br>
                     <input type="text" id="username" name="username"><br>
                     <br>
                 </div>
 
-                <div class="passbox">
+                <div class="regpassbox">
                     <label for="Password">Password</label><br>
                     <input type="password" id="password" name="password"><br>
                     <br>
-                </div>
-
+                </div> -->
                 <div class="submitdiv">
-                    <input type="submit" class="submitbtn" id="submit" name="submit" value="Sign in"><br>
-                </div>
-                <br>
-            </form>
-
-            <form method='get', action="{% url 'register' %}">
-                {% csrf_token %}
-                <h3 class="newmember">New member? Sign up here</h3>
-                <div class="regsubmitdiv">
-                    <input type="submit" class="regsubmitbtn" id="submit" name="submit" value="Sign up"><br>
+                    <input type="submit" class="regsubmitbtn" id="regsubmit" name="regsubmit" value="Sign up"><br>
                 </div>
             </form>
         </div>
@@ -62,11 +53,11 @@
                 height: 100%;
                 font-family: 'Poppins', sans-serif;
             }
-            .box {
+            .box{
                 position: absolute;
                 background-color: white;
                 min-width: 350px;
-                min-height: 400px;
+                min-height: 350px;
                 text-align: center;
                 opacity: 0.9;
                 border-radius: 10px;
@@ -81,10 +72,6 @@
                 margin-top: -15px;
             }
 
-            .newmember {
-                margin-top: 30px;
-            }
-
             .messages {
                 font-family: 'Poppins', sans-serif;
                 font-weight: bold;
@@ -92,12 +79,7 @@
                 padding-right: 30px;
             }
 
-            .passbox {
-                margin-top: -10px;
-            }
-            
-
-            .submitbtn, .regsubmitbtn {                /* Credit: https://getcssscan.com/css-buttons-examples */
+            .regsubmitbtn {                /* Credit: https://getcssscan.com/css-buttons-examples */
                 align-items: center;
                 appearance: none;
                 background-color: #FCFCFD;
@@ -128,16 +110,16 @@
                 font-size: 18px;
                 }
 
-            .submitbtn:focus, .regsubmitbtn:focus {
+            .regsubmitbtn:focus {
                 box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
                 }
 
-            .submitbtn:hover, .regsubmitbtn:hover {
+            .regsubmitbtn:hover {
                 box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
                 transform: translateY(-2px);
                 }
 
-            .submitbtn:active, .regsubmitbtn:active {
+            .regsubmitbtn:active {
                 box-shadow: #D6D6E7 0 3px 7px inset;
                 transform: translateY(2px);
                 }
