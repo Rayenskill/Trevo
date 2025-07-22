@@ -39,7 +39,7 @@
                 <br>
             </form>
 
-            <form method='get'>
+            <form method="get", action="{% url 'register' %}">
                 {% csrf_token %}
                 <h3 class="newmember">New member? Sign up here</h3>
                 <div class="regsubmitdiv">
