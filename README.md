@@ -1,2 +1,2 @@
 # Trevo
-Online markeplace where you acn sell items, chat with others, and more.
+Online markeplace where you can sell items, chat with others, and more.
