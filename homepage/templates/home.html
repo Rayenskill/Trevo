@@ -8,34 +8,85 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!--<link rel="stylesheet" href="{% static 'styles.css' %}">-->
 
-    <!--<style>
+    <style>
         /* this is the main stylesheet for the homepage */
         * {
-            font-family: Poppins, sans-serif;
+            font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
-            margin: 0;
             padding: 0;
         }
+        html, body {
+            background-color: #c4c4c4;
+        }
 
-        .body {
-            margin: 0 10px;
-            line-height: 1.6;
-            background-color: #c0a0a0;
+        /* Header styles */
+        header {
+            background-color: #686868;
+            padding: 0px 30px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
         }
-        .header {
+        .logo {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .menu {
             
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            color: white;
+        }
+        .menu button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        .profile-img{
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-image: url("{% static 'HeroBackground.jpg' %}");
+            background-size: cover;
+            font-size: 20px;
+            padding: 70px;
+        }
+        .hero-content {
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+        .hero-buttons {
+            justify-content: center;
+            display: flex;
+            gap: 15px;
+            padding: 10px 0;
+        }
+        .hero-buttons button {
+            background-color: #296080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        footer {
             background-color: #686868;
             padding: 20px;
             text-align: center;
         }
-        .footer {
-            background-color: #686868;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>-->
+    </style>
 </head>
 <body>
 
