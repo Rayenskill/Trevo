@@ -11,7 +11,6 @@ html, body {
     background-color: #c4c4c4;
 }
 
-
 /* Header styles */
 header {
     background-color: #686868;
@@ -30,7 +29,6 @@ header {
     gap: 20px;
     padding: 20px 0;
     color: white;
-    text-transform: uppercase;
 }
 .menu button {
     background: none;
@@ -45,7 +43,7 @@ header {
 }
 
 /* Hero section styles */
-section {
+.hero {
     background-image: url('{% static "hero-background.jpg" %}');
     justify-content: center;
     align-items: center ;

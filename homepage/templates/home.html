@@ -43,7 +43,7 @@
         <a class="logo" href="#"><h1>Trevo</h1></a>
         <div class="menu">
             <!-- We have to add these apps-->
-            <button>Log out</button>
+            <button onclick="location.href='{% url 'logout' %}'">Log out</button>
             <button>About us</button>
             <button>Discover</button>
             <!-- We should link this button to the profile app-->
@@ -59,7 +59,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Trevo</h1>
+            <h1>Welcome to Trevo {{ user.username }}!</h1>
             <p>Your one-stop platform for chatting, buying, selling, and hanging out!</p>
         </div>
         <div class="hero-buttons">
