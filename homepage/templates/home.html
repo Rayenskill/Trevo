@@ -18,41 +18,39 @@
             padding: 0;
         }
         html, body {
-            background-color: #c4c4c4;
+            background-color: #000000;
         }
 
         /* Header styles */
         header {
-            background-color: #686868;
+            background-color: #000000;
             padding: 0px 30px;
             text-align: center;
             display: flex;
             justify-content: space-between;
         }
         .logo {
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            font-size: 20px;
+            height: 100px;
+            width: 200px;
         }
         .menu {
-            
             display: flex;
             gap: 20px;
-            padding: 20px 0;
             color: white;
         }
-        .menu button {
+        .menu button{
             background: none;
-            border: none;
             color: white;
             cursor: pointer;
-            font-size: 17px;
+            border: none;
+        }
+        .menu-button {
+            font-size: 20px;
         }
         .profile-img{
             width: 50px;
             height: 50px;
         }
-
         /* Hero section styles */
         .hero {
             background-image: url("{% static 'HeroBackground.jpg' %}");
@@ -81,30 +79,74 @@
             font-size: 20px;
         }
 
+        /* Features section styles */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            padding: 50px 20px;
+            background-image: url("{% static 'FeaturesBackground.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-size: 25px;
+            padding: 70px;
+            text-align: center;
+        }
+        .features > * {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Shopping section styles */
+        .shopping {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 10px;
+            padding: 50px 20px;
+            background-image: url("{% static 'ShoppingBackground1.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-size: 25px;
+            padding: 70px;
+            text-align: center;
+        }
+        .shopping button {
+            background-color: #296080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
         footer {
-            background-color: #686868;
+            background-color: #000000;
             padding: 20px;
             text-align: center;
+            color: white;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a class="logo" href="#"><h1>Trevo</h1></a>
+        <a href="#"><img class="logo" src="{% static 'logo.png' %}" alt="Trevo Logo"></a>
         <div class="menu">
             <!-- We have to add these apps-->
-            <button onclick="location.href='{% url 'logout' %}'">Log out</button>
-            <button>About us</button>
-            <button>Discover</button>
+            <button class="menu-button" onclick="location.href='{% url 'logout' %}'">Log out</button>
+            <button class="menu-button">About us</button>
+            <button class="menu-button">Discover</button>
             <!-- We should link this button to the profile app-->
-            <button onclick="location.href='{% url 'login' %}'">Login</button>
+            <button class="menu-button" onclick="location.href='{% url 'login' %}'">Login</button>
             <!-- This button should be taken out and put in the profile app-->
-            <button onclick="location.href='{% url 'register' %}'">Sign Up</button>
+            <button class="menu-button" onclick="location.href='{% url 'register' %}'">Sign Up</button>
             <!-- I want to put an icon instead of text, preferably a user icon-->
             <!-- je veux faire en sorte que quand je clique sur le profile et que je ne suis as connecté ça me redirecte vers la page login-->
             <!-- et quand je suis connecté ça m'envoi au profile-->
-            <button class="profile-button"><img class="profile-img" src="{% static 'profile-icon.png' %}" alt="Profile"></button>
+            <button><img class="profile-img" src="{% static 'profile-icon.png' %}" alt="Profile"></button>
         </div>
     </header>
 
@@ -130,7 +172,7 @@
         </div>
         <div>
             <h4>Share your passions 🎨</h4>
-            <p>Showcase your creativity and connect with like-minded individuals.</p>
+            <p>Showcase your creativity and connect <br/>with like-minded individuals.</p> 
         </div>
     </section>
 
@@ -144,7 +186,6 @@
         <div>
             <h2>Buy and Sell with Ease 💰</h2>
             <!-- Saad imma need your help pour mettre le nombre de ventes faites sur le site -->
-            <!-- On devrait update le nombre 5 fois par jour je crois -->
             <p>Number of sales that were made on Trevo : <span id="sales-count">0</span></p>
     </section>
 
