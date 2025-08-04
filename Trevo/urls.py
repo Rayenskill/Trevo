@@ -17,8 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
+# The URLs from the start of navigation (i.e. when landing on the website.)
+# path('' ...) are the paths of the website. Example : example.com/ for path('') or example.com/admin for path('admin')
+# the include function allows to delegate the URL management to the separate apps. Example : include('homepage.urls') 
+# allows the website (example.com/) to use the urls.py file of the app to know what to do.
+
+
 urlpatterns = [
     path('', include('homepage.urls')),
     path('admin/', admin.site.urls),
     path('', include('loginpage.urls')),
+    path('chat/', include("chatapp.urls")),
 ]

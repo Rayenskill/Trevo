@@ -31,14 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'loginpage',
+    'homepage',
+    'chatapp',
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'loginpage',
-    'homepage',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,10 @@ TEMPLATES = [
         },
     },
 ]
+
+
+ASGI_APPLICATION = "Trevo.asgi.application"
+
 
 WSGI_APPLICATION = 'Trevo.wsgi.application'
 
