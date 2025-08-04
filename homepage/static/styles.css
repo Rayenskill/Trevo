@@ -1,0 +1,60 @@
+
+/* this is the main stylesheet for the homepage */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Reset some default styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+}
+html, body {
+    background-color: #c4c4c4;
+}
+
+
+/* Header styles */
+header {
+    background-color: #686868;
+    padding: 0px 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    color: white;
+    text-transform: uppercase;
+}
+.menu button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+.profile-img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Hero section styles */
+section {
+    background-image: url('{% static "hero-background.jpg" %}');
+    justify-content: center;
+    align-items: center ;
+}
+
+
+
+footer {
+    background-color: #686868;
+    padding: 20px;
+    text-align: center;
+}

@@ -1,28 +1,107 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <!--<style>
+        /* this is the main stylesheet for the homepage */
+        * {
+            font-family: Poppins, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .body {
+            margin: 0 10px;
+            line-height: 1.6;
+            background-color: #c0a0a0;
+        }
+        .header {
+            
+            background-color: #686868;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #686868;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>-->
 </head>
 <body>
 
     <header>
-    <h1>Hello and welcome to the homepage!</h1>
-    <h2>You Want to Chat, You Want to Buy, You Want to Sell, You Want to Hangout, We Have All You Need!</h2>
+        <a class="logo" href="#"><h1>Trevo</h1></a>
+        <div class="menu">
+            <!-- We have to add these apps-->
+            <button>Log out</button>
+            <button>About us</button>
+            <button>Discover</button>
+            <!-- We should link this button to the profile app-->
+            <button onclick="location.href='{% url 'login' %}'">Login</button>
+            <!-- This button should be taken out and put in the profile app-->
+            <button onclick="location.href='{% url 'register' %}'">Sign Up</button>
+            <!-- I want to put an icon instead of text, preferably a user icon-->
+            <!-- je veux faire en sorte que quand je clique sur le profile et que je ne suis as connecté ça me redirecte vers la page login-->
+            <!-- et quand je suis connecté ça m'envoi au profile-->
+            <button class="profile-button"><img class="profile-img" src="{% static 'profile-icon.png' %}" alt="Profile"></button>
+        </div>
     </header>
 
-    <div class="menu">
-        <button onclick="location.href='{% url 'login' %}'">Login</button>
-        <button onclick="location.href='{% url 'register' %}'">Sign Up</button>
-        <button onclick="location.href='{% url 'logout' %}'">Log out</button>
-        
-    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Trevo</h1>
+            <p>Your one-stop platform for chatting, buying, selling, and hanging out!</p>
+        </div>
+        <div class="hero-buttons">
+            <button onclick="location.href='{% url 'register' %}'">Get Started</button>
+            <button onclick="location.href='{% url 'login' %}'">Log in</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div>
+            <h4>Connect with Others 🗣️</h4>
+            <p>Share your thoughts, ideas, and experiences freely.</p>
+        </div>
+        <div>
+            <h4>Explore the world 🌍</h4>
+            <p>Share your thoughts, ideas, and experiences freely.</p>
+        </div>
+        <div>
+            <h4>Share your passions 🎨</h4>
+            <p>Showcase your creativity and connect with like-minded individuals.</p>
+        </div>
+    </section>
+
+    <section class="shopping">
+        <div>
+            <h2>Shop with Confidence 🛒</h2>
+            <p>Discover a wide range of products and services tailored to your needs.</p>
+            <!-- This button should link to the shopping page -->
+            <button>Start Shopping</button>
+        </div>
+        <div>
+            <h2>Buy and Sell with Ease 💰</h2>
+            <!-- Saad imma need your help pour mettre le nombre de ventes faites sur le site -->
+            <!-- On devrait update le nombre 5 fois par jour je crois -->
+            <p>Number of sales that were made on Trevo : <span id="sales-count">0</span></p>
+    </section>
 
     <footer>
+        <a href="#">Careers</a> | <a href="#">Help</a> | <a href="#">About</a> | <a href="#">Contact</a>
         <p>&copy; 2023 Trevo. All rights reserved.</p>
-        <p>Follow us on <a href="https://twitter.com/Trevo">Twitter</a> and <a href="https://facebook.com/Trevo">Facebook</a>.</p>
-        <p>Contact us at <a href="mailto:info@trevo.com">info@trevo.com</a>.</p>
+        <!--<p>Follow us on <a href="https://twitter.com/Trevo">Twitter</a> and <a href="https://facebook.com/Trevo">Facebook</a>.</p>
+        <p>Contact us at <a href="mailto:info@trevo.com">info@trevo.com</a>.</p>-->
     </footer>
 
 </body>
