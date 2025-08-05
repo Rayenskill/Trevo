@@ -1,28 +1,37 @@
-<!-- chat/templates/chat/index.html -->
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Chat Rooms</title>
-</head>
-<body>
-    What chat room would you like to enter?<br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chat Lobby</title>
+    </head>
 
-    <script>
-        document.querySelector('#room-name-input').focus();
-        document.querySelector('#room-name-input').onkeyup = function(e) {
-            if (e.key === 'Enter') {  // enter, return
-                document.querySelector('#room-name-submit').click();
+    <body>
+        <h1>Chat app</h1>
+
+        <script type="text/javascript">
+            // https://www.youtube.com/watch?v=cw8-KFVXpTE
+            // ws: instead of http: for a WebSocket a persistent two-way connection
+            // window.location is a JS variable that contains the current root URL ex. example.com or 127.0.0.1:8000
+            // ws/socket-server/ This is the specific path on the server where the Django WebSocket "consumer" is listening.
+            let url = `ws://${window.location}/ws/socket-server/`;
+
+            // triggering a WebSocket connection which takes the URL as an argument.
+            const chatSocket = new WebSocket(url);
+
+            // When a message arrives on this specific chatSocket connection, run this function.
+            // The e is the event object, which contains all the information about the incoming message.
+            // JSON.parse converts the e object into a JSON object which can then be manipulated in JS more freely.
+            // This is an event listener, always listening on the ongoing WebSocket connection established when this code is executed.
+            // i.e. when the page is rendered.
+            
+            chatSocket.onmessage = function(e){
+                let data = JSON.parse(e.data)
+                console.log('Data: ', data)
             }
-        };
 
-        document.querySelector('#room-name-submit').onclick = function(e) {
-            var roomName = document.querySelector('#room-name-input').value;
-            window.location.pathname = '/chat/' + roomName + '/';
-        };
-    </script>
-</body>
+
+        </script>
+    </body>
 </html>
+
 
