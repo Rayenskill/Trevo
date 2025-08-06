@@ -1,26 +1,66 @@
 import json
 from channels.generic.websocket import WebsocketConsumer
+from asgiref.sync import async_to_sync
+from channels.db import database_sync_to_async
+from django.contrib.auth import get_user_model
+
+from chatapp.models import Message # our Message Model.
+
+
+
+# in a WebSocket connection, the 'scope' is like the 'request' object in http. Its a DICTIONNARY.
+# self.scope['user'] : we can know who is the current Django User object because our webSocket is managed by AuthMiddlewareStack (asgi.py:26)
+# self.scope['url_route'] : URL parameters aka path
+# self.scope['url_route']['kwargs']['id'] allows to retrieve the other user's ID from the keywords in the URL.
+
 
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
+        self.current_user_id = self.scope['user'].id
+        self.other_user_id = self.scope['url_route']['kwargs']['id']
+        room_id_list = sorted([self.current_user_id, self.other_user_id])
+        self.room_group_name = f"chat_{room_id_list[0]}_{room_id_list[1]}"
+
+
+        # creates a Channel Layer called room_group_name (ex. chat_1_2) + channel_name (generated) = chat_1_2-consumer1
+        async_to_sync(self.channel_layer.group_add)(
+            self.room_group_name,
+            self.channel_name # unique name of the instanciation of the ChatConsumer object.
+        )
         self.accept()
 
-        # in the connect() method, the send method sends from the server to the client a message
-        # to confirm that the WebSocket connection was established successfully.
-        # the text has to be in json form since in index.html, the JS script awaits a JSON :
-        # chatSocket.onmessage = function(e){
-        #      let data = JSON.parse(e.data)
-        #        console.log('Data: ', data)
-        #   }
 
-        self.send(text_data=json.dumps({
-            'type':'connection_established',
-            'message':'You are now connected.'
-        }))
+    def disconnect(self):
+        async_to_sync(self.channel_layer.group_discard)(self.room_group_name, self.channel_name)
+    
 
-    def receive(self, text_data):
-        text_data_json = json.loads(text_data)
-        message = text_data_json['message']
-        print('Message: ', message)
+
+    # server receives data
+    def receive(self, text_data): # text_data prints like {"message":"gurtyo"}
+        text_data_json = json.loads(text_data) # so we convert it into a Python dict
+        message = text_data_json['message'] # and we print the value tied to the message key.
+        senderUsername = self.scope['user'].username
+
+        # group_send sends the received message from one client to the other consumers (internally, not displayed) and our own so they can see it.
+        async_to_sync(self.channel_layer.group_send)(
+            self.room_group_name,
+            {
+                'type':'chat_message', # type = name of handler method !!
+                'message':message,
+                'senderUsername':senderUsername,
+            }
+        )
+
+    # client -> server(receive) ->  server(group_send) -> channel_layer (everyone inside) -> calls the func 'type' for each consumer -> client on-screen
+    def chat_message(self, event):
+        message = event['message']
+        senderUsername = event['senderUsername']
+
+        self.send(
+            text_data=json.dumps({
+                'type':'chat_message',
+                'message':message,
+                'senderUsername':senderUsername
+            })
+        )
         
-

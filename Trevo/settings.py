@@ -73,6 +73,12 @@ TEMPLATES = [
 
 ASGI_APPLICATION = "Trevo.asgi.application"
 
+CHANNEL_LAYERS = {
+    'default':{
+        'BACKEND':'channels.layers.InMemoryChannelLayer'
+    }
+}
+
 
 WSGI_APPLICATION = 'Trevo.wsgi.application'
 
