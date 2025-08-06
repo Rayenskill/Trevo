@@ -139,7 +139,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = ''
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'homepage/static')
+    os.path.join(BASE_DIR, 'homepage/static'),
+    os.path.join(BASE_DIR, 'loginpage/static'),
+    os.path.join(BASE_DIR, 'chatapp/static'),
 ]
 
 
