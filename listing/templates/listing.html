@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>listing</title>
+    <title>TikTok</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico" >
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        [x-cloak] {
+            display: none !important; 
+        }
+        body {
+            @apply font-light
+        }
+        h1 {
+            @apply text-[2rem] font-bold
+        }
+        h2 {
+            @apply text-[1.2rem] font-bold
+        }
+        .input-field {
+            @apply bg-neutral-100 w-full px-3 py-2.5 border border-neutral-300 rounded-sm placeholder-neutral-400 focus:border-neutral-400 focus:outline-hidden 
+        }
+        button {
+            @apply cursor-pointer
+        }
+        .button {
+            @apply bg-neutral-100 w-full px-3 py-2.5 rounded-sm font-medium text-neutral-400 select-none
+        }
+        /*
+        .button-active {
+            @apply bg-rose-500 hover:bg-rose-600 text-white
+        }
+        .button-nav {
+            @apply w-full h-10 rounded-md hover:bg-neutral-100 flex items-center px-1 
+        }
+        .button-nav span {
+            @apply ml-3 font-medium hidden lg:block whitespace-nowrap transition duration-300
+        }
+        .button-rounded {
+            @apply w-full h-10 rounded-full hover:bg-neutral-100 flex items-center justify-between px-2
+        }
+        .button-article {
+            @apply rounded-full size-13 bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center transition-all duration-300
+        }
+        input[type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: none; 
+            appearance: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            scrollbar-width: none;          /* Firefox */
+            /*-ms-overflow-style: none;       /* IE 10+ */
+        /*}*/
+    </style>
+    <link href="/static/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>This is the listing page</h1>
-    <br/>
-    in production ...
+    <div class="min-h-[100dvh]">
+        <!-- side bar fixed to the left, baground color to yellow 100% opacity, height = height of screen, width=74 -->
+        <aside class="fixed bg-white h-screen w-74">
+            <div class="pl-4.5 pt-5">
+                <!-- I have to put the logo here-->
+                <a href="">
+                    <h1>LOGO</h1>
+                </a>
+            </div>
+        </aside>
+        <main class="bg-green-100 h-screen w-full">
+            <article></article>
+            <scroll-bar></scroll-bar>
+        </main>
+    </div>
+    
 </body>
 </html>

@@ -1,58 +1,117 @@
-
 /* this is the main stylesheet for the homepage */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-/* Reset some default styles */
 * {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     padding: 0;
 }
 html, body {
-    background-color: #c4c4c4;
+    background-color: #000000;
 }
 
 /* Header styles */
 header {
-    background-color: #686868;
+    background-color: #000000;
     padding: 0px 30px;
     text-align: center;
     display: flex;
     justify-content: space-between;
 }
 .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
+    height: 100px;
+    width: 200px;
 }
 .menu {
     display: flex;
     gap: 20px;
-    padding: 20px 0;
     color: white;
 }
-.menu button {
+.menu button{
     background: none;
-    border: none;
     color: white;
     cursor: pointer;
+    border: none;
+}
+.menu-button {
     font-size: 20px;
 }
 .profile-img{
     width: 50px;
     height: 50px;
 }
-
 /* Hero section styles */
 .hero {
-    background-image: url('{% static "hero-background.jpg" %}');
+    background-image: url("../static/assets/HeroBackground.jpg");
+    background-size: cover;
+    font-size: 20px;
+    padding: 70px;
+}
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+.hero-buttons {
     justify-content: center;
-    align-items: center ;
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+.hero-buttons button {
+    background-color: #296080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
+/* Features section styles */
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 50px 20px;
+    background-image: url("../static/assets/FeaturesBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 25px;
+    padding: 70px;
+    text-align: center;
+}
+.features > * {
+    flex: 1;
+    padding: 20px;
+}
 
-
+/* Shopping section styles */
+.shopping {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 50px 20px;
+    background-image: url("../static/assets/ShoppingBackground1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 25px;
+    padding: 70px;
+    text-align: center;
+}
+.shopping button {
+    background-color: #296080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
 footer {
-    background-color: #686868;
+    background-color: #000000;
     padding: 20px;
     text-align: center;
+    color: white;
 }
