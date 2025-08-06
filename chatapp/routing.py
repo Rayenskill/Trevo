@@ -1,4 +1,4 @@
-from django.urls import re_path
+from django.urls import path
 from . import consumers
 
 
@@ -6,7 +6,7 @@ from . import consumers
 # routing.py sees the /ws/socket-server/ path and hands the request to your ChatConsumer class.
 
 websocket_urlpatterns = [
-    re_path(r'ws/socket-server/', consumers.ChatConsumer.as_asgi())
+    path("ws/chat/<int:id>/", consumers.ChatConsumer.as_asgi())
 ]
 
 
