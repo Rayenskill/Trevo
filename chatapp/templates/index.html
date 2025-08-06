@@ -1,7 +1,11 @@
 <!DOCTYPE html>
+    {% load static %}
     <html>
     <head>
         <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <title>Chat Lobby</title>
     </head>
 
@@ -31,62 +35,7 @@
         <div id="messages">
         </div>
 
-        <script type="text/javascript">
-            // https://www.youtube.com/watch?v=cw8-KFVXpTE
-            // ws: instead of http: for a WebSocket a persistent two-way connection
-            // window.location.host is a JS variable that contains the current root URL ex. example.com or 127.0.0.1:8000
-            // ws/socket-server/ This is the specific path on the server where the Django WebSocket "consumer" is listening.
-            const connectButton = document.getElementById("connect-button")
-            const otherUserIdInput = document.getElementById("other-user-id")
-
-            connectButton.addEventListener('click', function(){
-                otherUserId = otherUserIdInput.value.trim()
-                let url = `ws://${window.location.host}/ws/chat/${otherUserId}/`;
-                // triggering a WebSocket connection which takes the URL as an argument.
-                const chatSocket = new WebSocket(url);
-                console.log("WebSocket estalibshed!")
-
-
-                // When a message arrives on this specific chatSocket connection, run this function.
-                // The e is the event object, which contains all the information about the incoming message.
-                // JSON.parse converts the e object into a JSON object which can then be manipulated in JS more freely.
-                // This is like an event listener, always listening on the ongoing WebSocket connection
-                chatSocket.onmessage = function(event){
-                    let data = JSON.parse(event.data)
-                    console.log('Data: ', data) // the data here is the message we sent in the connect() method in consumers.py
-    
-                    if(data.type === 'chat_message'){
-                        let messages = document.getElementById('messages')
-                        messages.insertAdjacentHTML('beforeend', `<div>
-                            <p>${data.senderUsername}: ${data.message}</p>
-                            </div>`)
-                    }
-                }
-    
-                const senderUsername = document.getElementById('username').innerText
-                let form = document.getElementById('form') // document.getElementById references <form id='form'>
-                // addEventListener tells the client to wait for an event of type 'submit' (when submitting or sending the form)
-                // when the event happens, execute the following function that takes the event as argument called 'event'.
-                // preventDefault() prevents the default behavior of a form, aka reloading the page and sending a http request.
-                // event.target (<form>) .message (form name='message') .value (the text written) into a variable message.
-                // chatSocket.send takes a JSON object aka message and turns it into a readable Python string (that can be printed)
-                // Basically, Client types a message ----> received by the server with the consumer receive()
-                form.addEventListener('submit', function(event){ 
-                    event.preventDefault()
-                    let message = event.target.message.value
-                    chatSocket.send(JSON.stringify({
-                        'message': message,
-                        'senderUsername':senderUsername
-                    }))
-                    form.reset()
-                })
-            })
-
-
-
-
-            
-        </script>
+        <script src="{% static '/websocket.js' %}"></script>
     </body>
 </html>
 
