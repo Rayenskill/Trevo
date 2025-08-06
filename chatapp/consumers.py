@@ -3,6 +3,7 @@ from channels.generic.websocket import WebsocketConsumer
 from asgiref.sync import async_to_sync
 from channels.db import database_sync_to_async
 from django.contrib.auth import get_user_model
+from datetime import datetime
 
 from chatapp.models import Message # our Message Model.
 
@@ -32,7 +33,7 @@ class ChatConsumer(WebsocketConsumer):
         self.accept()
 
 
-    def disconnect(self):
+    def disconnect(self, code):
         async_to_sync(self.channel_layer.group_discard)(self.room_group_name, self.channel_name)
     
 
@@ -41,6 +42,8 @@ class ChatConsumer(WebsocketConsumer):
         text_data_json = json.loads(text_data) # so we convert the string into a Python dict {"message": "gurtyo"}
         message = text_data_json['message'] # and we get the value tied to the 'message' key. ("gurtyo")
         senderUsername = self.scope['user'].username
+        now = datetime.now()
+        timestamp_string = now.strftime("%Y-%m-%d %H:%M:%S")
 
         # group_send sends the received message from one client to the other consumers (internally, not displayed) and our own so they can see it.
         async_to_sync(self.channel_layer.group_send)(
@@ -49,6 +52,7 @@ class ChatConsumer(WebsocketConsumer):
                 'type':'chat_message', # type = name of handler method !!
                 'message':message,
                 'senderUsername':senderUsername,
+                'timestamp':timestamp_string
             }
         )
 
@@ -57,12 +61,14 @@ class ChatConsumer(WebsocketConsumer):
     def chat_message(self, event):
         message = event['message']
         senderUsername = event['senderUsername']
+        timestamp = event['timestamp']
 
         self.send( # the message that gets displayed with chatSocket.onmessage
             text_data=json.dumps({
                 'type':'chat_message',
                 'message':message,
-                'senderUsername':senderUsername
+                'senderUsername':senderUsername,
+                'timestamp': timestamp
             })
         )
         

@@ -19,9 +19,9 @@ connectButton.addEventListener('click', function(){
 
         if(data.type === 'chat_message'){           // type is defined in consumer.py
             let messages = document.getElementById('messages')
-            messages.insertAdjacentHTML('beforeend', `<div> // basically inserts the message text inside the 'messages' div.
-                <p>${data.senderUsername}: ${data.message}</p>
-                </div>`)
+            messages.insertAdjacentHTML('beforeend', `<div>
+                <p>${data.senderUsername}: ${data.message} @${data.timestamp}</p>
+                </div>`) // basically inserts the message text inside the 'messages' div.
         }
     }
 
@@ -40,6 +40,7 @@ connectButton.addEventListener('click', function(){
             'message': message,
             'senderUsername':senderUsername
         }))
+
         form.reset()
     })
 })
