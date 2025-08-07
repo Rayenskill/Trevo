@@ -1,0 +1,19 @@
+body {
+    background-image: url('cloverbg.png')
+}
+
+.chatbox {
+    position: absolute;
+    background-color: white;
+    left:40%;
+    transform: translateX(-80%);
+    border-radius: 30px;
+    height:650px;
+    width:500px;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.title {
+    position: absolute;
+    left: 5%;
+}
