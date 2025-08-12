@@ -1,47 +1,37 @@
 <!DOCTYPE html>
     {% load static %}
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{% static "chatstyles.css" %}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <title>Messaging ...</title>
-    </head>
-
-    <body>
-        <h1>Chat app</h1>
-        <h2>Current user:
-            <div id="username">
-                {{user.username}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'chatstyles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="chat-list">
+            <h2 class="chat-list-title">Chats</h2>
+            <div id="chat-list-items">
+                <a class="chat-link" href="#" data-chat-id="user_john">John Smith</a>
+                <a class="chat-link" href="#" data-chat-id="user_jane">Jane Doe</a>
+                <a class="chat-link" href="#" data-chat-id="user_sam">Sam Wilson</a>
+                <a class="chat-link" href="#" data-chat-id="user_alex">Alex Ray</a>
             </div>
-            User ID:
-            <div id="userID">
-                {{user.id}}
+        </div>
+
+        <!-- Chat display section -->
+        <div class="chat-display">
+            <div id="chat-display-content" class="chat-display-placeholder">
+                <p>Select a chat from the left.</p>
             </div>
-        </h2>
-
-        <div>
-            <label for="other-user-id">Enter recipient ID</label>
-            <input type="text", id="other-user-id">
-            <button id="connect-button">Connnect to chat</button>
         </div>
-
-        <div class="chatbox">
-            <h1 class="title">Chats</h1>
-        </div>
-
-
-        <form id="form"?>
-            <input type="text", name="message">
-        </form>
-
-        <div id="messages">
-        </div>
-
-        <script src="{% static 'websocket.js' %}"></script>
-    </body>
+    </div>
+    
+    <script src="{% static 'script.js' %}"></script>
+</body>
 </html>
-
 

@@ -21,9 +21,7 @@ from chatapp.models import Message # our Message Model.
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
         self.current_user_id = self.scope['user'].id
-        self.other_user_id = self.scope['url_route']['kwargs']['id']
-        room_id_list = sorted([self.current_user_id, self.other_user_id])
-        self.room_group_name = f"chat_{room_id_list[0]}_{room_id_list[1]}"
+        self.room_group_name = self.scope['url_route']['kwargs']['room_name']
 
         # creates a Channel Layer (group) called room_group_name (ex. chat_1_2) + channel_name (generated) = chat_1_2-consumer1
         async_to_sync(self.channel_layer.group_add)(
