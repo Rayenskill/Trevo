@@ -1,3 +1,5 @@
+{% load static %}
+{% get_media_prefix as MEDIA_URL %}
 <!DOCTYPE html>
 <html lang="en" x-data="{ darkMode: false }" :class="{ 'dark': darkMode }">
 <head>
@@ -136,7 +138,7 @@
                         <button id="profile" class="button-nav hover:bg-neutral-100 hover:dark:bg-neutral-700 rounded-">
                             <div class="size-8 flex-shrink-0">
                                 <div class="rounded-full size-7 overflow-hidden">
-                                    <img src="../media/avatar.png" class="w-full h-full object-cover object-center">
+                                    <img src="{{ MEDIA_URL }}avatar.png" class="w-full h-full object-cover object-center">
                                 </div>
                             </div>
                             <span :class="{ '!opacity-0 pointer-events-none': showDrawer }" class="">Profile</span>
@@ -258,7 +260,7 @@
             <article class="h-screen mx-auto py-2 px-2 flex justify-center items-center">
                 <div class="bg-black relative  max-w-full max-h-full lg:h-full rounded-2xl aspect-[9/16] flex justify-center items-center">
 
-                    <img src="../media/robot.jpg" alt="the article that was posted" class="aspect-[9/16] rounded-2xl object-cover">
+                    <img src="{{ MEDIA_URL }}robot.jpg" alt="the article that was posted" class="aspect-[9/16] rounded-2xl object-cover">
 
                     <article-info class="flex absolute bottom-0 left-0 right-0">
                         <div class="mt-auto p-5 text-white z-10">
@@ -273,7 +275,7 @@
                     <article-buttons class="absolute -right-17 bottom-0 flex flex-col gap-2 ">
                         <button id="author" class="relative flex justify-center mb-4 rounded-full">
                             <div class="overflow-hidden rounded-full size-12 bg-neutral-100">
-                                <img src="../media/avatar.png" alt="profile picture" class="w-full h-full object-center object-cover">
+                                <img src="{{ MEDIA_URL }}avatar.png" alt="profile picture" class="w-full h-full object-center object-cover">
                             </div>
                             <div class="absolute top-9 group">
                                 <div class="bg-rose-400 group-hover:bg-rose-600 size-5 group-hover:scale-125 transition-transform duration-350 rounded-full flex items-center justify-center">
