@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import re_path
 from . import consumers
 
 
@@ -6,10 +6,11 @@ from . import consumers
 # routing.py sees the /ws/socket-server/ path and hands the request to your ChatConsumer class.
 
 websocket_urlpatterns = [
-    path("ws/chat/<int:id>/", consumers.ChatConsumer.as_asgi())
+    re_path(r"ws/chat/(?P<room_name>\w+)/$", consumers.ChatConsumer.as_asgi())
 ]
 
-# <int:id> awaits an int as ID.
+# (?P<room_name>\w+) Captures a "room\_name" parameter consisting of one or more words (w+)
+# /$ Matches the literal forward slash and indicates the end of the URL pattern.
 
 
 
